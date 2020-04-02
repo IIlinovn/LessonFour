@@ -11,8 +11,8 @@ export class UserAuthComponent implements OnInit {
     private userService: UserService
   ) { }
 
-  email = 'email@sample111'
-  password = '1111'
+  email = 'eda29@example.org'
+  password = 'password'
 
   ngOnInit() {
   }
@@ -20,9 +20,12 @@ export class UserAuthComponent implements OnInit {
   auth() {
     this.userService
       .auth(this.email, this.password)
-      .subscribe((res) => {
-        console.log(res)
-      })
+      .subscribe(
+        (response: any) => {
+          console.log(response)
+          localStorage.setItem('token', response.access_token)
+        }
+      )
   }
 
 }
