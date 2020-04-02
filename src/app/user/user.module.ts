@@ -5,10 +5,11 @@ import { UserRoutingModule } from './user-routing.module';
 import { UserAuthComponent } from './user-auth/user-auth.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { UserUpdateComponent } from './user-update/user-update.component';
 
 
 @NgModule({
-  declarations: [UserAuthComponent],
+  declarations: [UserAuthComponent, UserUpdateComponent],
   imports: [
     CommonModule,
     UserRoutingModule,

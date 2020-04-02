@@ -1,0 +1,10 @@
+<p *ngIf="user">
+    <input type="email" placeholder="email" [(ngModel)]="user.email">
+    <input type="text" placeholder="name" [(ngModel)]="user.name">
+    <input type="text" placeholder="avatar" [(ngModel)]="user.avatar">
+
+    <button (click)="updateProfile()">Update</button>
+</p>
+
+
+<h1>{{ title }}</h1>
