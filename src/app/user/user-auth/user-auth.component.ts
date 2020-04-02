@@ -24,6 +24,20 @@ export class UserAuthComponent implements OnInit {
         (response: any) => {
           console.log(response)
           localStorage.setItem('token', response.access_token)
+          this.getProfile()
+        }
+      )
+  }
+
+  user = null
+
+  getProfile() {
+    this.userService
+      .getMe(localStorage.token)
+      .subscribe(
+        (res) => {
+          console.log(res)
+          this.user = res;
         }
       )
   }

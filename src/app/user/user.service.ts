@@ -17,4 +17,9 @@ export class UserService {
         password: password
       })
   }
+
+  getMe(token) {
+    return this.httpClient
+      .post('http://lesson-4.iilinov-n.myjino.ru/api/auth/me', { token: token })
+  }
 }

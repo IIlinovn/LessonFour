@@ -7,3 +7,9 @@
 
     <button (click)="auth()">Auth</button> <br>
 </p>
+
+<p *ngIf="user">
+    {{user.name}} <br>
+    {{user.email}} <br>
+    {{user.avatar}}
+</p>
