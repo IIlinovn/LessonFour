@@ -11,8 +11,6 @@ export class UserUpdateComponent implements OnInit {
     private userService: UserService,
   ) { }
 
-  item = ''
-
   ngOnInit() {
     this.getProfile()
   }
