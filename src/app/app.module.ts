@@ -11,6 +11,7 @@ import { ProductListComponent } from './product-list/product-list.component';
 import { ProductViewComponent } from './product-view/product-view.component';
 import { ProductService } from './product.service';
 import { APP_BASE_HREF } from '@angular/common';
+import { UserModule } from './user/user.module';
 
 @NgModule({
   imports: [ 
@@ -18,6 +19,7 @@ import { APP_BASE_HREF } from '@angular/common';
     FormsModule,
     AppRoutingModule,
     HttpClientModule,
+    UserModule,
   ],
   declarations: [ 
     AppComponent, 
